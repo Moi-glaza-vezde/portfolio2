@@ -25,8 +25,10 @@ export const DataJob = (props: DataJobType) => {
 
 const StyledDataJob = styled.div`
    display: flex;
+   align-items: center;
    gap: 7px;
 `;
 const StyledJubText = styled.span`
+   align-items: center;
    align-self: center;
 `;
