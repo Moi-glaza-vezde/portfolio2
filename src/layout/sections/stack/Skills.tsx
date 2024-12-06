@@ -10,11 +10,55 @@ export const Skills = () => {
       <StyledSkills>
          <SectionTitle>My Tech Stack</SectionTitle>
          <SectionText> Technologies I’ve been working with recently</SectionText>
-         <FlexWrapper wrap="wrap" justify="space-between">
-            <Skill />
+         <FlexWrapper wrap="wrap" justify="space-around">
+            <Skill
+               iconId={'html'}
+               title={'html 5'}
+               text={
+                  ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
+            <Skill
+               iconId={'css'}
+               title={'css 3'}
+               text={
+                  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
+            <Skill
+               iconId={'javaScript'}
+               title={'javaScript'}
+               text={
+                  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
+            <Skill
+               iconId={'sass'}
+               title={'sass'}
+               text={
+                  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
+            <Skill
+               iconId={'react'}
+               title={'react'}
+               text={
+                  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
+            <Skill
+               iconId={'gHub'}
+               title={'gitHub'}
+               text={
+                  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maximeLorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime'
+               }
+            />
          </FlexWrapper>
       </StyledSkills>
    );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+   background-color: #615effac;
+   min-height: 100vh;
+`;

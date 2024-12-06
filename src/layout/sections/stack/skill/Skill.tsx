@@ -2,23 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
 
-export const Skill = () => {
+type SkillPropsType = {
+   iconId: string;
+   title: string;
+   text: string;
+};
+
+export const Skill = (props: SkillPropsType) => {
    return (
       <StyledSkill>
-         <Icon iconId="html" />
-         <SkillTitle>html 5</SkillTitle>
-         <SkillText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consectetur nobis maxime
-            voluptatibus nisi qui culpa nemo voluptates repellendus numquam, nam odit
-         </SkillText>
+         <Icon iconId={props.iconId} />
+         <SkillTitle>{props.title}</SkillTitle>
+         <SkillText>{props.text}</SkillText>
       </StyledSkill>
    );
 };
 
 const StyledSkill = styled.div`
-   min-height: 100vh;
    background-color: #fc95f2ac;
-   width: 100%;
+   width: 30%;
+   margin: 10px;
 `;
 const SkillTitle = styled.h3``;
-const SkillText = styled.span``;
+const SkillText = styled.p``;
