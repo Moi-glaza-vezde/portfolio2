@@ -18,7 +18,6 @@ export const Menu = (props: { menuItems: Array<string> }) => {
                );
             })}
          </ul>
-         <SocialContacts />
       </StyledMenu>
    );
 };

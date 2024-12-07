@@ -1,9 +1,14 @@
 import React from 'react';
 import { Icon } from '../icon/Icon';
+import styled from 'styled-components';
 
-export const SocialContacts = () => {
+type SocialContactsPropsType = {
+   display?: string;
+   gap?: string;
+};
+export const SocialContacts = (props: SocialContactsPropsType) => {
    return (
-      <ul>
+      <StyledSocialContacts gap={props.gap}>
          <li>
             <a href="#">
                <Icon width={'32px'} height={'32px'} viewBox={'0 0 32 32 '} iconId={'gitHub'} />
@@ -19,6 +24,11 @@ export const SocialContacts = () => {
                <Icon width={'32px'} height={'32px'} viewBox={'0 0 32 32 '} iconId={'linkedIn'} />
             </a>
          </li>
-      </ul>
+      </StyledSocialContacts>
    );
 };
+
+const StyledSocialContacts = styled.ul<SocialContactsPropsType>`
+   display: flex;
+   gap: ${(props) => props.gap || '0'};
+`;
