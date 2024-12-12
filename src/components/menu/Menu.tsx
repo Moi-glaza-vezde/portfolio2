@@ -1,5 +1,4 @@
 import React from 'react';
-import { SocialContacts } from '../socialContacts/SocialContacts';
 import styled from 'styled-components';
 
 // type MenuPropsType = {
