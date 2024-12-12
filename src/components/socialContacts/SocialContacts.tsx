@@ -11,17 +11,17 @@ export const SocialContacts = (props: SocialContactsPropsType) => {
       <StyledSocialContacts gap={props.gap}>
          <li>
             <a href="#">
-               <Icon width={'32px'} height={'32px'} viewBox={'0 0 32 32 '} iconId={'gitHub'} />
+               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'gitHub'} />
             </a>
          </li>
          <li>
             <a href="#">
-               <Icon width={'32px'} height={'32px'} viewBox={'0 0 32 32 '} iconId={'twitter'} />
+               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'twitter'} />
             </a>
          </li>
          <li>
             <a href="#">
-               <Icon width={'32px'} height={'32px'} viewBox={'0 0 32 32 '} iconId={'linkedIn'} />
+               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'linkedIn'} />
             </a>
          </li>
       </StyledSocialContacts>
