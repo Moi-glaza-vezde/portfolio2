@@ -10,5 +10,6 @@ export const theme = {
       secondaryFont: 'rgba(167, 167, 167, 1)',
       mainTitleFont: 'rgba(217, 217, 217, 1)',
       gradientFont: '#13b0f5 -2.06%, #e70faa 100%',
+      linkColor: 'rgba(255, 255, 255, 1)',
    },
 };

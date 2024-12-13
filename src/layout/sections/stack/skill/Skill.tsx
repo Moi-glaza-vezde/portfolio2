@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
+import { theme } from '../../../../styled/Theme';
 
 type SkillPropsType = {
    iconId: string;
@@ -11,7 +12,7 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
    return (
       <StyledSkill>
-         <Icon iconId={props.iconId} />
+         <Icon iconId={props.iconId} width={'120px'} height={'120px'} />
          <SkillTitle>{props.title}</SkillTitle>
          <SkillText>{props.text}</SkillText>
       </StyledSkill>
@@ -19,9 +20,19 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-   background-color: #fc95f2ac;
-   width: 30%;
-   margin: 10px;
+   width: 380px;
+   margin: 30px 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 `;
-const SkillTitle = styled.h3``;
-const SkillText = styled.p``;
+const SkillTitle = styled.h3`
+   color: ${theme.colors.titleFont};
+   text-transform: uppercase;
+   font-size: 30px;
+   margin: 20px 0;
+`;
+const SkillText = styled.p`
+   color: ${theme.colors.titleFont};
+   text-align: center;
+`;

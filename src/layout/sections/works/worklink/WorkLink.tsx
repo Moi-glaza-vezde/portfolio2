@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
+import { theme } from '../../../../styled/Theme';
 
 type WorkLinkType = {
    iconId: string;
@@ -16,9 +17,19 @@ export const WorkLink = (props: WorkLinkType) => {
 };
 
 const StyledWorkLinkContainer = styled.div`
-   /* display: flex;
-   gap: 7px; */
+   margin-top: 20px;
+   width: 100%;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
 `;
 const StyledWorkLink = styled.a`
    align-self: center;
+   text-decoration: underline;
+
+   font-size: 16px;
+   font-weight: 400;
+
+   color: ${theme.colors.linkColor};
 `;

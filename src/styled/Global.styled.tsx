@@ -22,6 +22,10 @@ body {
 	line-height: 1.4;
 }
 
+
+section{
+	padding: 100px 0;
+}
 a{
 	text-decoration: none;
 
