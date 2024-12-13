@@ -99,6 +99,3 @@ const Link = styled.a`
    color: ${theme.colors.secondaryFont};
    color: transparent;
 `;
-/* background: linear-gradient(90deg, ${theme.colors.gradientFont});
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */

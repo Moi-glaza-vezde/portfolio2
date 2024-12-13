@@ -16,8 +16,8 @@ export const WorkLink = (props: WorkLinkType) => {
 };
 
 const StyledWorkLinkContainer = styled.div`
-   display: flex;
-   gap: 7px;
+   /* display: flex;
+   gap: 7px; */
 `;
 const StyledWorkLink = styled.a`
    align-self: center;

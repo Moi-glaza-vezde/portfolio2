@@ -30,6 +30,7 @@ const StyledWork = styled.div`
    background-color: #7e5effac;
    max-width: 375px;
    margin: 10px;
+   height: 566px;
 `;
 const Image = styled.img`
    width: 100%;
