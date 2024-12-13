@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../../../components/icon/Icon';
 import styled from 'styled-components';
+import { theme } from '../../../../styled/Theme';
 
 type DataJobType = {
    iconId: string;
@@ -31,4 +32,10 @@ const StyledDataJob = styled.div`
 const StyledJubText = styled.span`
    align-items: center;
    align-self: center;
+
+   font-size: 12px;
+   font-weight: 500;
+   line-height: 28px;
+   letter-spacing: 1px;
+   color: ${theme.colors.secondaryFont};
 `;
