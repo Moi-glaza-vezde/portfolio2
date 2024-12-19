@@ -6,6 +6,7 @@ import { FlexWrapper } from '../../components/FlexWrapper.Styled';
 import { Container } from '../../components/Container';
 import { theme } from '../../styled/Theme';
 import { HeaderMenu } from './headerMenu/HeaderMenu';
+import { MobileMenu } from './mobileMenu/mobileMenu';
 
 const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
 
@@ -17,6 +18,7 @@ export const Header = () => {
                <Logo />
                <FlexWrapper gap={'50px'}>
                   <HeaderMenu menuItems={items} />
+                  <MobileMenu menuItems={items} />
                   <SocialContacts gap={'20px'} />
                </FlexWrapper>
             </FlexWrapper>

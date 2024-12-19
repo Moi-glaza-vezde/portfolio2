@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../../styled/Theme';
 
-// type MenuPropsType = {
-//    menuItems: Array<string>;
-// };
-
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
    return (
       <StyledHeaderMenu>
@@ -33,7 +29,12 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 
 const StyledHeaderMenu = styled.nav`
    display: flex;
-   // gap: 50px;
+
+   @media screen and (max-width: 768px) {
+   }
+   @media ${theme.media.largeЕablet} {
+      display: none;
+   }
 `;
 const MenuList = styled.ul`
    display: flex;

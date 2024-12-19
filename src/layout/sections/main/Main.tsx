@@ -10,7 +10,7 @@ export const Main = () => {
    return (
       <StyledMain>
          <Container>
-            <FlexWrapper align="center" justify="space-between">
+            <FlexWrapper align="center" justify="space-around" wrap={'wrap'}>
                <StyledMainTextContainer>
                   <GreetingsText> Hi 👋,</GreetingsText>
                   <AcquaintanceText> My name is</AcquaintanceText>
@@ -39,6 +39,10 @@ const DecorImg = styled.img`
    top: -40%;
    left: -40%;
 
+   display: none;
+   @media ${theme.media.desktop} {
+      display: block;
+   }
    // transform: rotate(-5deg);
 `;
 const StyledPhotoBorder = styled.div`

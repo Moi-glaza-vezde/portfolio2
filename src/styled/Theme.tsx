@@ -15,4 +15,11 @@ export const theme = {
       typeWorkfont: 'rgba(1, 140, 15, 1)',
       lineBg: 'rgba(235, 234, 237, 1)',
    },
+
+   media: {
+      tablet: 'screen and (max-width: 768px)',
+      largeЕablet: 'screen and (max-width: 924px)',
+      mobile: 'screen and (max-width: 576px)',
+      desktop: 'screen and (min-width: 1355px)',
+   },
 };
