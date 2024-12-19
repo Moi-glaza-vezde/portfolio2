@@ -19,7 +19,9 @@ export const Header = () => {
                <FlexWrapper gap={'50px'}>
                   <HeaderMenu menuItems={items} />
                   <MobileMenu menuItems={items} />
-                  <SocialContacts gap={'20px'} />
+                  <WrapperContact>
+                     <SocialContacts gap={'20px'} />
+                  </WrapperContact>
                </FlexWrapper>
             </FlexWrapper>
          </Container>
@@ -35,4 +37,9 @@ const StyledHeader = styled.header`
    left: 0;
    right: 0;
    background-color: ${theme.colors.primaryBg};
+`;
+const WrapperContact = styled.div`
+   @media ${theme.media.mobile} {
+      display: none;
+   }
 `;

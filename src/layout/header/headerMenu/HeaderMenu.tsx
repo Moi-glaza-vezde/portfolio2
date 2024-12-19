@@ -38,7 +38,10 @@ const StyledHeaderMenu = styled.nav`
 `;
 const MenuList = styled.ul`
    display: flex;
-   gap: 60px;
+   /* gap: 60px; */
+   justify-content: space-between;
+   width: 609px;
+   //width: 100%;
 `;
 
 const Mask = styled.span`

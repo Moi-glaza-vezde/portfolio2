@@ -17,9 +17,10 @@ export const theme = {
    },
 
    media: {
-      tablet: 'screen and (max-width: 768px)',
-      largeЕablet: 'screen and (max-width: 924px)',
+      tablet: 'screen and (max-width: 886px)',
+      largeЕablet: 'screen and (max-width: 927px)',
       mobile: 'screen and (max-width: 576px)',
       desktop: 'screen and (min-width: 1355px)',
+      card: 'screen and (max-width: 400px)',
    },
 };

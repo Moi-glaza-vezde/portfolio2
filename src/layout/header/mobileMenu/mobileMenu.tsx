@@ -129,6 +129,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             `}
       }
    }
+
+   @media ${theme.media.mobile} {
+      right: 10px;
+   }
 `;
 
 const MenuList = styled.ul`

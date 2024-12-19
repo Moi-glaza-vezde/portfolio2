@@ -20,11 +20,17 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: ${theme.colors.primaryBg};
 	line-height: 1.4;
+	min-height: 360px;
 }
 
 
 section{
 	padding: 100px 0;
+
+@media ${theme.media.mobile} {
+	padding: 80px 0;
+}
+
 }
 a{
 	text-decoration: none;

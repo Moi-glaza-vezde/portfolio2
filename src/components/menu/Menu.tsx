@@ -23,12 +23,18 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledMenu = styled.nav`
-   display: flex;
-   gap: 30px;
+   // display: flex;
+   // gap: 30px;
 `;
 const List = styled.ul`
    display: flex;
    gap: 51px;
+
+   @media ${theme.media.mobile} {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+   }
 `;
 const ListItem = styled.li``;
 const Link = styled.a`

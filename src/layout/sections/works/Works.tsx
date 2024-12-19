@@ -11,6 +11,7 @@ import projectImg4 from '../../../assets/images/project4.jpg';
 import projectImg5 from '../../../assets/images/project5.jpg';
 import projectImg6 from '../../../assets/images/project6.jpg';
 import { Container } from '../../../components/Container';
+import { theme } from '../../../styled/Theme';
 
 export const Works = () => {
    return (
@@ -18,7 +19,7 @@ export const Works = () => {
          <Container>
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>
-            <FlexWrapper wrap="wrap" justify="space-between">
+            <FlexWrapper wrap="wrap" justify="space-around">
                <Work
                   title={'Project Tile goes here1'}
                   text={
@@ -79,4 +80,10 @@ export const Works = () => {
    );
 };
 
-const StyledWorks = styled.section``;
+const StyledWorks = styled.section`
+   @media ${theme.media.tablet} {
+      ${FlexWrapper} {
+         gap: 50px;
+      }
+   }
+`;

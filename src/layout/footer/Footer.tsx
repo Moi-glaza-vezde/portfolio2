@@ -13,7 +13,7 @@ export const Footer = () => {
       <StyledFooter>
          <Container>
             <ItemsWrapper>
-               <FlexWrapper justify={'space-between'}>
+               <FlexWrapper wrap={'wrap'} justify={'space-between'}>
                   <Icon
                      iconId={'logoFooter'}
                      width={'97px'}
@@ -28,7 +28,7 @@ export const Footer = () => {
             </ItemsWrapper>
 
             <ItemsWrapper>
-               <FlexWrapper align={'center'} justify={'space-between'}>
+               <FlexWrapper align={'center'} justify={'space-between'} wrap={'wrap'}>
                   <Menu menuItems={items} />
                   <TextFooter>
                      Designed and built by{' '}
@@ -43,8 +43,31 @@ export const Footer = () => {
    );
 };
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+   ${FlexWrapper} {
+      @media ${theme.media.mobile} {
+         justify-content: space-around;
+         gap: 20px;
+      }
+      ${FlexWrapper} {
+         @media ${theme.media.tablet} {
+            gap: 50px;
+         }
+         @media ${theme.media.mobile} {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+         }
+      }
+   }
+`;
 const ItemsWrapper = styled.div`
+   ${FlexWrapper} {
+      @media ${theme.media.largeЕablet} {
+         justify-content: space-around;
+         gap: 20px;
+      }
+   }
    padding: 50px 0;
    position: relative;
    & + & {
@@ -82,9 +105,12 @@ const TextColor = styled.span`
       background-color: ${theme.colors.secondaryFont};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      text-align: center;
    }
 `;
 const TextFooter = styled.div`
+   text-align: center;
    font-size: 18px;
    font-weight: 400;
    color: ${theme.colors.secondaryFont};

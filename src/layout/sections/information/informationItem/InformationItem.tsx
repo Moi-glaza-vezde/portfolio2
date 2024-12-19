@@ -62,10 +62,12 @@ const JobTitle = styled.div`
    display: flex;
    justify-content: space-between;
    margin: 5px 0;
+   gap: 10px;
 `;
 const JobData = styled.div`
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
 `;
 const Title = styled.h3`
    font-size: 20px;
@@ -80,7 +82,7 @@ const WorkType = styled.span`
    font-size: 9px;
    font-weight: 600;
    text-align: center;
-   width: 84px;
+   min-width: 84px;
    height: 24px;
    color: ${theme.colors.typeWorkfont};
    background-color: ${theme.colors.typeWorkBg};

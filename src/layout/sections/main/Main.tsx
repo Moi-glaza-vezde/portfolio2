@@ -6,6 +6,7 @@ import { Container } from '../../../components/Container';
 import { theme } from '../../../styled/Theme';
 import { Icon } from '../../../components/icon/Icon';
 import vectorImg from '../../../assets/images/Abstract.svg';
+import { font } from '../../../components/Common';
 export const Main = () => {
    return (
       <StyledMain>
@@ -31,8 +32,19 @@ export const Main = () => {
    );
 };
 
+const StyledMain = styled.div`
+   min-height: 100vh;
+   background-color: ${theme.colors.primaryBg};
+   display: flex;
+   @media ${theme.media.largeЕablet} {
+      padding: 150px 0 0;
+   }
+`;
 const DecorWrapper = styled.div`
    position: relative;
+   @media ${theme.media.largeЕablet} {
+      margin: 0px 20px;
+   }
 `;
 const DecorImg = styled.img`
    position: absolute;
@@ -43,53 +55,51 @@ const DecorImg = styled.img`
    @media ${theme.media.desktop} {
       display: block;
    }
-   // transform: rotate(-5deg);
 `;
 const StyledPhotoBorder = styled.div`
    max-width: 349px;
-   height: 349px;
+   max-height: 349px;
    overflow: hidden;
-
    border-radius: 50%;
-
    padding: 9px;
-
    background-image: linear-gradient(180deg, #e70faa 0%, #00c0fd 100%);
+
+   @media ${theme.media.mobile} {
+      max-width: 249px;
+      max-height: 249px;
+      padding: 5px;
+   }
 `;
 
 const StyledPhoto = styled.img`
    width: 100%;
+   height: 100%;
    border-radius: 50%;
-`;
-const StyledMain = styled.div`
-   min-height: 100vh;
-   background-color: ${theme.colors.primaryBg};
-   display: flex;
 `;
 
 const GreetingsText = styled.span`
-   font-size: 58px;
-   font-weight: 700;
+   ${font({ weight: 700, Fmax: 58, Fmin: 36 })}
+
    letter-spacing: -1px;
    color: ${theme.colors.mainTitleFont};
 `;
 const AcquaintanceText = styled.span`
-   font-size: 58px;
-   font-weight: 700;
+   ${font({ weight: 700, Fmax: 58, Fmin: 36 })}
+
    letter-spacing: -1px;
    color: ${theme.colors.mainTitleFont};
 `;
 const StyledName = styled.h2`
-   font-size: 58px;
-   font-weight: 700;
+   ${font({ weight: 700, Fmax: 58, Fmin: 36 })}
+
    letter-spacing: -1px;
    background: linear-gradient(90deg, ${theme.colors.gradientFont});
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 `;
 const StyledMainTitle = styled.h1`
-   font-size: 58px;
-   font-weight: 700;
+   ${font({ weight: 700, Fmax: 58, Fmin: 36 })}
+
    letter-spacing: -1px;
    color: ${theme.colors.mainTitleFont};
 `;

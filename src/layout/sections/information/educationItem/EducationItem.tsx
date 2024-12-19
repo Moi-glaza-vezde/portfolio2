@@ -11,7 +11,7 @@ type EducationItemPropsType = {
 export const EducationItem = (props: EducationItemPropsType) => {
    return (
       <StyledEducationItem>
-         <FlexWrapper align={'center'} justify={'space-between'}>
+         <FlexWrapper align={'center'} justify={'space-between'} gap={'20px'}>
             <StyledEducationTitle>{props.title}</StyledEducationTitle>
             <StyledEducationWorkType>{props.workSchedule}</StyledEducationWorkType>
          </FlexWrapper>
@@ -63,7 +63,7 @@ const StyledEducationWorkType = styled.span`
    font-weight: 600;
    //text-align: center;
    line-height: 1.2;
-   width: 84px;
+   min-width: 84px;
    height: 24px;
    color: ${theme.colors.typeWorkfont};
    background-color: ${theme.colors.typeWorkBg};

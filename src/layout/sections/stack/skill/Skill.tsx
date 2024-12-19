@@ -20,7 +20,8 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-   width: 380px;
+   flex-grow: 1;
+   width: 330px;
    margin: 30px 10px;
    display: flex;
    flex-direction: column;
@@ -35,4 +36,5 @@ const SkillTitle = styled.h3`
 const SkillText = styled.p`
    color: ${theme.colors.titleFont};
    text-align: center;
+   font-size: 18px;
 `;
