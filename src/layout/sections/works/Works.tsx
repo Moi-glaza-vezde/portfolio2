@@ -12,68 +12,65 @@ import projectImg5 from '../../../assets/images/project5.jpg';
 import projectImg6 from '../../../assets/images/project6.jpg';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styled/Theme';
+import { font } from '../../../components/Common';
 
-export const Works = () => {
+const workData = [
+   {
+      title: 'Project Tile goes here1',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg1,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+   {
+      title: 'Project Tile goes here2',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg2,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+   {
+      title: 'Project Tile goes here3',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg3,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+   {
+      title: 'Project Tile goes here4',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg4,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+   {
+      title: 'Project Tile goes here5',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg5,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+   {
+      title: 'Project Tile goes here6',
+      text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+      src: projectImg6,
+      description: ' HTML , JavaScript, SASS, React',
+   },
+];
+export const Works: React.FC = () => {
    return (
       <StyledWorks>
          <Container>
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>
-            <FlexWrapper wrap="wrap" justify="space-around">
-               <Work
-                  title={'Project Tile goes here1'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg1}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
-               <Work
-                  title={'Project Tile goes here2'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg2}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
-               <Work
-                  title={'Project Tile goes here3'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg3}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
-               <Work
-                  title={'Project Tile goes here4'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg4}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
-               <Work
-                  title={'Project Tile goes here5'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg5}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
-               <Work
-                  title={'Project Tile goes here6'}
-                  text={
-                     'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-                  }
-                  src={projectImg6}
-                  descriptionBold={'Tech stack :'}
-                  description={' HTML , JavaScript, SASS, React'}
-               />
+            <FlexWrapper wrap="wrap" justify="space-around" gap="10px">
+               {workData.map((w, index) => {
+                  return (
+                     <Work
+                        key={index}
+                        title={w.title}
+                        text={w.text}
+                        src={w.src}
+                        descriptionBold={'Tech stack :'}
+                        description={w.description}
+                     />
+                  );
+               })}
             </FlexWrapper>
          </Container>
       </StyledWorks>
@@ -81,9 +78,11 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-   @media ${theme.media.tablet} {
-      ${FlexWrapper} {
-         gap: 50px;
-      }
+   ${SectionTitle} {
+      ${font({ weight: 700, Fmax: 45, Fmin: 38 })}
+      padding-right: 45px;
+   }
+   ${SectionText} {
+      padding-right: 40px;
    }
 `;

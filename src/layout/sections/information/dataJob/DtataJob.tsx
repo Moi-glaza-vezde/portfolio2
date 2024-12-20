@@ -10,7 +10,7 @@ type DataJobType = {
    height: string;
    viewBox: string;
 };
-export const DataJob = (props: DataJobType) => {
+export const DataJob: React.FC<DataJobType> = (props: DataJobType) => {
    return (
       <StyledDataJob>
          <Icon
@@ -19,7 +19,7 @@ export const DataJob = (props: DataJobType) => {
             height={props.height}
             viewBox={props.viewBox}
          />
-         <StyledJubText>{props.text}</StyledJubText>
+         <StyledJobText>{props.text}</StyledJobText>
       </StyledDataJob>
    );
 };
@@ -29,7 +29,7 @@ const StyledDataJob = styled.div`
    align-items: center;
    gap: 7px;
 `;
-const StyledJubText = styled.span`
+const StyledJobText = styled.span`
    align-items: center;
    align-self: center;
 

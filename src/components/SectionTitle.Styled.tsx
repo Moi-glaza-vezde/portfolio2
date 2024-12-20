@@ -10,5 +10,5 @@ export const SectionTitle = styled.h2`
    font-weight: 700; */
    text-align: center;
    color: ${theme.colors.titleFont};
-   margin-bottom: 50px;
+   margin-bottom: 35px;
 `;

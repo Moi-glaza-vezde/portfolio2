@@ -6,24 +6,40 @@ type SocialContactsPropsType = {
    display?: string;
    gap?: string;
 };
-export const SocialContacts = (props: SocialContactsPropsType) => {
+
+const iconData = [
+   {
+      href: '#',
+      iconId: 'gitHub',
+   },
+   {
+      href: '#',
+      iconId: 'twitter',
+   },
+   {
+      href: '#',
+      iconId: 'linkedIn',
+   },
+];
+export const SocialContacts: React.FC<SocialContactsPropsType> = (
+   props: SocialContactsPropsType
+) => {
    return (
       <StyledSocialContacts gap={props.gap}>
-         <li>
-            <a href="#">
-               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'gitHub'} />
-            </a>
-         </li>
-         <li>
-            <a href="#">
-               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'twitter'} />
-            </a>
-         </li>
-         <li>
-            <a href="#">
-               <Icon width={'30px'} height={'30px'} viewBox={'0 0 32 32 '} iconId={'linkedIn'} />
-            </a>
-         </li>
+         {iconData.map((i, index) => {
+            return (
+               <li key={index}>
+                  <a href={i.href}>
+                     <Icon
+                        width={'30px'}
+                        height={'30px'}
+                        viewBox={'0 0 32 32 '}
+                        iconId={i.iconId}
+                     />
+                  </a>
+               </li>
+            );
+         })}
       </StyledSocialContacts>
    );
 };

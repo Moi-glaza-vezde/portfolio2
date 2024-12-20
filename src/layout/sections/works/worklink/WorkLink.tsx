@@ -1,35 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
-import { theme } from '../../../../styled/Theme';
+import { S } from '../work/Work_Styles';
 
 type WorkLinkType = {
    iconId: string;
    linkText: string;
 };
-export const WorkLink = (props: WorkLinkType) => {
+export const WorkLink: React.FC<WorkLinkType> = (props: WorkLinkType) => {
    return (
-      <StyledWorkLinkContainer>
+      <S.WorkLinkContainer>
          <Icon iconId={props.iconId} width="20px" height="20px" viewBox="0 0 20 20" />
-         <StyledWorkLink href="#">{props.linkText}</StyledWorkLink>
-      </StyledWorkLinkContainer>
+         <S.WorkLink href="#">{props.linkText}</S.WorkLink>
+      </S.WorkLinkContainer>
    );
 };
-
-const StyledWorkLinkContainer = styled.div`
-   margin-top: 20px;
-   width: 100%;
-   height: 30px;
-   display: flex;
-   align-items: center;
-   gap: 10px;
-`;
-const StyledWorkLink = styled.a`
-   align-self: center;
-   text-decoration: underline;
-
-   font-size: 16px;
-   font-weight: 400;
-
-   color: ${theme.colors.linkColor};
-`;

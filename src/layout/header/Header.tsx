@@ -1,45 +1,46 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
 import { SocialContacts } from '../../components/socialContacts/SocialContacts';
 import { FlexWrapper } from '../../components/FlexWrapper.Styled';
 import { Container } from '../../components/Container';
-import { theme } from '../../styled/Theme';
-import { HeaderMenu } from './headerMenu/HeaderMenu';
-import { MobileMenu } from './mobileMenu/mobileMenu';
+import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
+import { MobileMenu } from './headerMenu/mobileMenu/mobileMenu';
+import { S } from './Header_Styles';
 
 const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+   const [width, setWidth] = React.useState(window.innerWidth);
+   const breakpoint = 927;
+
+   React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+
+      window.addEventListener('resize', handleWindowResize);
+
+      return () => window.removeEventListener('resize', handleWindowResize);
+   }, []);
+
    return (
-      <StyledHeader>
+      <S.Header>
          <Container>
-            <FlexWrapper align="center" justify="space-between">
-               <Logo />
+            <FlexWrapper align="center" justify="space-between" paddingRight={'20px'}>
+               <S.WrapperLogo>
+                  <Logo />
+               </S.WrapperLogo>
                <FlexWrapper gap={'50px'}>
-                  <HeaderMenu menuItems={items} />
-                  <MobileMenu menuItems={items} />
-                  <WrapperContact>
+                  {width <= breakpoint ? (
+                     <MobileMenu menuItems={items} />
+                  ) : (
+                     <DesktopMenu menuItems={items} />
+                  )}
+
+                  <S.WrapperContact>
                      <SocialContacts gap={'20px'} />
-                  </WrapperContact>
+                  </S.WrapperContact>
                </FlexWrapper>
             </FlexWrapper>
          </Container>
-      </StyledHeader>
+      </S.Header>
    );
 };
-
-const StyledHeader = styled.header`
-   padding-top: 40px;
-   z-index: 10;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   background-color: ${theme.colors.primaryBg};
-`;
-const WrapperContact = styled.div`
-   @media ${theme.media.mobile} {
-      display: none;
-   }
-`;

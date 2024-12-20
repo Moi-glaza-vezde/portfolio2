@@ -1,22 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
 import { DataJob } from '../dataJob/DtataJob';
-import { theme } from '../../../../styled/Theme';
+import { S } from '../Information_Stylea';
 
 type InformationItemPropsType = {
-   // iconId: string;
-   // text: string;
    title: string;
    workSchedule: string;
 };
-export const InformationItem = (props: InformationItemPropsType) => {
+export const InformationItem: React.FC<InformationItemPropsType> = (
+   props: InformationItemPropsType
+) => {
    return (
-      <StyledInformationItem>
-         <JobTitle>
-            <Title>{props.title}</Title>
-            <WorkType>{props.workSchedule}</WorkType>
-         </JobTitle>
-         <JobData>
+      <S.InformationItem>
+         <S.JobTitleWrapper>
+            <S.JobTitle>{props.title}</S.JobTitle>
+            <S.WorkType>{props.workSchedule}</S.WorkType>
+         </S.JobTitleWrapper>
+         <S.JobData>
             <DataJob
                iconId={'jobBuild'}
                text={'Dr. Rajkumar’s Learning App'}
@@ -38,56 +37,7 @@ export const InformationItem = (props: InformationItemPropsType) => {
                height={'12px'}
                viewBox={'0 0 12 12'}
             />
-         </JobData>
-      </StyledInformationItem>
+         </S.JobData>
+      </S.InformationItem>
    );
 };
-
-const StyledInformationItem = styled.div`
-   padding: 24px 0;
-   position: relative;
-
-   &::before {
-      position: absolute;
-      bottom: 0;
-      content: '';
-      display: inline-block;
-      width: 100%;
-      height: 2px;
-      background-color: ${theme.colors.lineBg};
-   }
-`;
-
-const JobTitle = styled.div`
-   display: flex;
-   justify-content: space-between;
-   margin: 5px 0;
-   gap: 10px;
-`;
-const JobData = styled.div`
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-`;
-const Title = styled.h3`
-   font-size: 20px;
-   font-weight: 400;
-   letter-spacing: 1px;
-   text-align: left;
-   text-underline-position: from-font;
-   text-decoration-skip-ink: none;
-   color: ${theme.colors.titleFont};
-`;
-const WorkType = styled.span`
-   font-size: 9px;
-   font-weight: 600;
-   text-align: center;
-   min-width: 84px;
-   height: 24px;
-   color: ${theme.colors.typeWorkfont};
-   background-color: ${theme.colors.typeWorkBg};
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 100px;
-`;
