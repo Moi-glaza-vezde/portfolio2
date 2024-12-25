@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../../../../components/icon/Icon';
-import { S } from '../work/Work_Styles';
+import { S } from '../Work_Styles';
 
 type WorkLinkType = {
    iconId: string;

@@ -1,17 +1,14 @@
 import React from 'react';
 import foto from '../../../assets/images/foto.jpg';
-import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper.Styled';
 import { Container } from '../../../components/Container';
-import { theme } from '../../../styled/Theme';
-import { Icon } from '../../../components/icon/Icon';
 import vectorImg from '../../../assets/images/Abstract.svg';
 import { S } from './Main_Styles';
 export const Main: React.FC = () => {
    return (
       <S.Main>
          <Container>
-            <FlexWrapper align="center" justify="space-around" wrap={'wrap'}>
+            <FlexWrapper align="center" justify="space-around" wrap="wrap">
                <S.MainTextContainer>
                   <S.GreetingsText> Hi 👋,</S.GreetingsText>
                   <S.AcquaintanceText> My name is</S.AcquaintanceText>

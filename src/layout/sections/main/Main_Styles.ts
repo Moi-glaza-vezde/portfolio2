@@ -14,7 +14,7 @@ const Main = styled.div`
       padding-top: 20px;
    }
    @media ${theme.media.largeЕablet} {
-      padding: 150px 0 0;
+      padding: 150px 0 50px;
       ${FlexWrapper} {
          gap: 50px;
       }

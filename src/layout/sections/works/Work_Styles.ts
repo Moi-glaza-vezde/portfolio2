@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { theme } from '../../../../styled/Theme';
+import { theme } from '../../../styled/Theme';
+import { font } from '../../../components/Common';
 
 const Work = styled.div`
    overflow: hidden;
@@ -11,7 +12,8 @@ const Work = styled.div`
    margin: 0 5px 70px 5px;
 
    @media ${theme.media.tablet} {
-      max-width: 600px;
+      max-width: 700px;
+      width: 100%;
       height: 100%;
    }
 `;
@@ -32,29 +34,17 @@ const WorkTitle = styled.h3`
    color: ${theme.colors.titleFont};
    font-size: 28px;
    font-weight: 500;
-   @media ${theme.media.tablet} {
-      font-size: 35px;
-   }
-   @media ${theme.media.mobile} {
-      font-size: 28px;
-   }
-   @media ${theme.media.card} {
-      font-size: 24px;
-   }
+   ${font({ weight: 500, Fmax: 28, Fmin: 25 })}
 `;
 const WorkText = styled.p`
    font-size: 18px;
    font-weight: 300;
    color: ${theme.colors.titleFont};
    margin: 15px 0;
+
+   ${font({ weight: 300, Fmax: 20, Fmin: 18 })}
    @media ${theme.media.tablet} {
-      font-size: 22px;
-   }
-   @media ${theme.media.mobile} {
-      font-size: 20px;
-   }
-   @media ${theme.media.card} {
-      font-size: 18px;
+      line-height: 1.6;
    }
 `;
 const WorkDescriptionBold = styled.span`

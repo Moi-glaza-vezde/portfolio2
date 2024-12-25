@@ -18,11 +18,7 @@ export const Footer: React.FC = () => {
                      width={'97px'}
                      height={'59px'}
                      viewBox={'0 0 97 59'}></Icon>
-                  <FlexWrapper
-                     align={'center'}
-                     gap={'90px'}
-                     paddingTop={'15px'}
-                     paddingRight={'20px'}>
+                  <FlexWrapper align={'center'} gap={'90px'}>
                      <S.PhoneNumber href="#">+91 12345 09876</S.PhoneNumber>
                      <S.Mail>info@example.com</S.Mail>
                      <SocialContacts gap={'20px'} />

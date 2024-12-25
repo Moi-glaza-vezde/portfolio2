@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
    return (
       <S.Header>
          <Container>
-            <FlexWrapper align="center" justify="space-between" paddingRight={'20px'}>
+            <FlexWrapper align="center" justify="space-between">
                <S.WrapperLogo>
                   <Logo />
                </S.WrapperLogo>

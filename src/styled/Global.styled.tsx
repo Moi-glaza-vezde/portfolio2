@@ -20,7 +20,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background-color: ${theme.colors.primaryBg};
 	line-height: 1.4;
-	min-height: 360px;
+	min-width: 360px;
 }
 
 

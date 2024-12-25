@@ -1,7 +1,7 @@
 import React from 'react';
 import { WorkLink } from '../worklink/WorkLink';
 import { FlexWrapper } from '../../../../components/FlexWrapper.Styled';
-import { S } from './Work_Styles';
+import { S } from '../Work_Styles';
 
 type WorkPropsType = {
    src: string;
