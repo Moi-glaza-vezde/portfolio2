@@ -87,7 +87,7 @@ export const Particle = () => {
                   type: 'circle',
                   stroke: {
                      width: 1,
-                     color: '#e70faa',
+                     // color: '#e70faa',
                   },
                },
                size: {

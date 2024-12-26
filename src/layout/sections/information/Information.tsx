@@ -11,7 +11,7 @@ const infoData = [
 ];
 export const Information: React.FC = () => {
    return (
-      <S.Information>
+      <S.Information id={'about'}>
          <Container>
             <S.InformationContainer>
                <S.Title>About Me</S.Title>

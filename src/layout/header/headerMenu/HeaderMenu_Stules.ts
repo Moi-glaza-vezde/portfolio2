@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../../styled/Theme';
+import { Link } from 'react-scroll';
 //-----------menu
 const MenuList = styled.ul`
    display: flex;
@@ -43,6 +44,16 @@ const ListItem = styled.li`
    @media ${theme.media.largeЕablet} {
       font-size: 30px;
    }
+`;
+
+const NavLink = styled(Link)`
+   font-family: 'DM Sans', sans-serif;
+   font-size: 20px;
+   // line-height: 1.4;
+   font-weight: 500;
+   color: ${theme.colors.secondaryFont};
+   color: transparent;
+   cursor: pointer;
 
    &::before {
       content: '';
@@ -62,7 +73,8 @@ const ListItem = styled.li`
       }
    }
 
-   &:hover {
+   &:hover,
+   &.active {
       &::before {
          transform: scale(1);
       }
@@ -76,15 +88,6 @@ const ListItem = styled.li`
          }
       }
    }
-`;
-
-const Link = styled.a`
-   font-family: 'DM Sans', sans-serif;
-   font-size: 20px;
-   // line-height: 1.4;
-   font-weight: 500;
-   color: ${theme.colors.secondaryFont};
-   color: transparent;
 `;
 
 //--------------mobileMenu
@@ -195,7 +198,7 @@ export const S = {
    MenuList,
    Mask,
    ListItem,
-   Link,
+   NavLink,
 
    MobileMenu,
    MobileMenuPopup,

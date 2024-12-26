@@ -7,8 +7,6 @@ import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
 import { MobileMenu } from './headerMenu/mobileMenu/mobileMenu';
 import { S } from './Header_Styles';
 
-const items = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
-
 export const Header: React.FC = () => {
    const [width, setWidth] = React.useState(window.innerWidth);
    const breakpoint = 927;
@@ -29,11 +27,7 @@ export const Header: React.FC = () => {
                   <Logo />
                </S.WrapperLogo>
                <FlexWrapper gap={'50px'}>
-                  {width <= breakpoint ? (
-                     <MobileMenu menuItems={items} />
-                  ) : (
-                     <DesktopMenu menuItems={items} />
-                  )}
+                  {width <= breakpoint ? <MobileMenu /> : <DesktopMenu />}
 
                   <S.WrapperContact>
                      <SocialContacts gap={'20px'} />

@@ -4,27 +4,31 @@ import { FlexWrapper } from '../../../components/FlexWrapper.Styled';
 import { font } from '../../../components/Common';
 
 const Main = styled.div`
-   min-height: 92vh;
+   min-height: 100vh;
 
    background-color: ${theme.colors.primaryBg};
 
    display: flex;
    align-items: center;
+
    ${FlexWrapper} {
       padding-top: 20px;
       @media ${theme.media.largeЕablet} {
          justify-content: space-around;
+         padding: 150px 0 50px;
+         gap: 50px;
       }
    }
-   @media ${theme.media.largeЕablet} {
+   /* @media ${theme.media.largeЕablet} {
       padding: 150px 0 50px;
       ${FlexWrapper} {
          gap: 50px;
       }
-   }
+   } */
 `;
 const DecorWrapper = styled.div`
    position: relative;
+   margin-left: 30px;
    @media ${theme.media.largeЕablet} {
       margin: 0px 20px;
    }
@@ -82,8 +86,13 @@ const Name = styled.h2`
    -webkit-text-fill-color: transparent;
 `;
 const MainTitle = styled.h1`
-   ${font({ weight: 700, Fmax: 52, Fmin: 36 })}
+   ${font({ weight: 400, Fmax: 36, Fmin: 30 })}
    min-width: 500px;
+   @media ${theme.media.largeЕablet} {
+      min-width: 0;
+
+      width: 100%;
+   }
 
    letter-spacing: -1px;
    color: ${theme.colors.mainTitleFont};
@@ -94,6 +103,10 @@ const MainTitle = styled.h1`
 const MainTextContainer = styled.div`
    display: flex;
    flex-direction: column;
+   /* max-width: 500px; */
+   @media ${theme.media.largeЕablet} {
+      flex-grow: 1;
+   }
 `;
 
 export const S = {

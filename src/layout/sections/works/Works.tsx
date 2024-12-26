@@ -54,7 +54,7 @@ const workData = [
 ];
 export const Works: React.FC = () => {
    return (
-      <StyledWorks>
+      <StyledWorks id={'projects'}>
          <Container>
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>

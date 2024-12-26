@@ -8,13 +8,13 @@ import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
 export const Main: React.FC = () => {
    return (
-      <S.Main>
+      <S.Main id={'home'}>
          <Container>
             <FlexWrapper align="center" justify="space-between" wrap="wrap">
                <S.MainTextContainer>
                   <S.GreetingsText> Hi 👋,</S.GreetingsText>
                   <S.AcquaintanceText> My name is</S.AcquaintanceText>
-                  <S.Name>Pavan MG</S.Name>
+                  <S.Name>Nikolai Dubivitskii</S.Name>
 
                   <S.MainTitle>
                      <p> A Frontend Developer</p>

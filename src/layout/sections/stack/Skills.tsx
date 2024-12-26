@@ -42,7 +42,7 @@ const skillData = [
 
 export const Skills: React.FC = () => {
    return (
-      <StyledSkills>
+      <StyledSkills id={'techStack'}>
          <Container>
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionText> Technologies I’ve been working with recently</SectionText>
@@ -57,7 +57,8 @@ export const Skills: React.FC = () => {
 };
 
 const StyledSkills = styled.section`
-   padding: 0 0 0px;
+   padding-top: 120px;
+
    background-color: ${theme.colors.primaryBg};
    position: relative;
 `;

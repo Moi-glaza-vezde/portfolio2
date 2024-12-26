@@ -5,7 +5,7 @@ import { S } from './Contact_Styles';
 
 export const Contacts: React.FC = () => {
    return (
-      <S.Contact>
+      <S.Contact id={'contact'}>
          <Container>
             <SectionTitle>For any questions please mail me:</SectionTitle>
             <S.Email href="mailto:#">hi@pavanmg.in</S.Email>

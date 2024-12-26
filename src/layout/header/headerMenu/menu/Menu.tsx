@@ -1,24 +1,30 @@
 import React from 'react';
 import { S } from '../HeaderMenu_Stules';
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
-   menuItems: Array<string>;
-}) => {
+const items = [
+   { title: 'Home', href: 'home' },
+   { title: 'About', href: 'about' },
+   { title: 'Tech Stack', href: 'techStack' },
+   { title: 'Projects', href: 'projects' },
+   { title: 'Contact', href: 'contact' },
+];
+
+export const Menu: React.FC = () => {
    return (
       <S.MenuList>
-         {props.menuItems.map((item: string, index) => {
+         {items.map((item: { title: string; href: string }, index) => {
             return (
                <S.ListItem key={index}>
-                  <S.Link href="">
-                     {item}
+                  <S.NavLink to={item.href} activeClass="active" smooth={true} spy={true}>
+                     {item.title}
 
                      <S.Mask>
-                        <span> {item}</span>
+                        <span> {item.title}</span>
                      </S.Mask>
                      <S.Mask>
-                        <span> {item}</span>
+                        <span> {item.title}</span>
                      </S.Mask>
-                  </S.Link>
+                  </S.NavLink>
                </S.ListItem>
             );
          })}
