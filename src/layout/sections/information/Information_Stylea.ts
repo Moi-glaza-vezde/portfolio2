@@ -3,7 +3,10 @@
 import styled from 'styled-components';
 import { theme } from '../../../styled/Theme';
 
-const Information = styled.section``;
+const Information = styled.section`
+   background-color: ${theme.colors.primaryBg};
+   position: relative;
+`;
 const InformationContainer = styled.section`
    max-width: 695px;
    padding: 0 0;

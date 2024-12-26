@@ -5,6 +5,8 @@ import { FlexWrapper } from '../../components/FlexWrapper.Styled';
 import { theme } from '../../styled/Theme';
 
 const Footer = styled.footer`
+   background-color: ${theme.colors.primaryBg};
+   position: relative;
    margin-top: 75px;
 
    ${FlexWrapper} {

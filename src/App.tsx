@@ -7,10 +7,12 @@ import { Works } from './layout/sections/works/Works';
 import { Information } from './layout/sections/information/Information';
 import { Contacts } from './layout/sections/contact/Contacts';
 import { Footer } from './layout/footer/Footer';
+import { Particle } from './components/particle/Particle';
 
 function App() {
    return (
       <div>
+         <Particle />
          <Header />
          <Main />
          <Skills />

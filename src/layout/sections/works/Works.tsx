@@ -78,6 +78,8 @@ export const Works: React.FC = () => {
 };
 
 const StyledWorks = styled.section`
+   background-color: ${theme.colors.primaryBg};
+   position: relative;
    ${SectionTitle} {
       ${font({ weight: 700, Fmax: 45, Fmin: 38 })}
       padding-right: 45px;

@@ -12,6 +12,9 @@ const Main = styled.div`
    align-items: center;
    ${FlexWrapper} {
       padding-top: 20px;
+      @media ${theme.media.largeЕablet} {
+         justify-content: space-around;
+      }
    }
    @media ${theme.media.largeЕablet} {
       padding: 150px 0 50px;
@@ -80,9 +83,13 @@ const Name = styled.h2`
 `;
 const MainTitle = styled.h1`
    ${font({ weight: 700, Fmax: 52, Fmin: 36 })}
+   min-width: 500px;
 
    letter-spacing: -1px;
    color: ${theme.colors.mainTitleFont};
+   p {
+      display: none;
+   }
 `;
 const MainTextContainer = styled.div`
    display: flex;

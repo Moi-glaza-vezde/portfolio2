@@ -59,4 +59,5 @@ export const Skills: React.FC = () => {
 const StyledSkills = styled.section`
    padding: 0 0 0px;
    background-color: ${theme.colors.primaryBg};
+   position: relative;
 `;
