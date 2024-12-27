@@ -13,6 +13,7 @@ import projectImg6 from '../../../assets/images/project6.jpg';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styled/Theme';
 import { font } from '../../../components/Common';
+import { Zoom } from 'react-awesome-reveal';
 
 const workData = [
    {
@@ -59,18 +60,20 @@ export const Works: React.FC = () => {
             <SectionTitle>Projects</SectionTitle>
             <SectionText>Things I’ve built so far</SectionText>
             <FlexWrapper wrap="wrap" justify="space-around" gap="10px">
-               {workData.map((w, index) => {
-                  return (
-                     <Work
-                        key={index}
-                        title={w.title}
-                        text={w.text}
-                        src={w.src}
-                        descriptionBold={'Tech stack :'}
-                        description={w.description}
-                     />
-                  );
-               })}
+               <Zoom cascade={true} damping={0.2}>
+                  {workData.map((w, index) => {
+                     return (
+                        <Work
+                           key={index}
+                           title={w.title}
+                           text={w.text}
+                           src={w.src}
+                           descriptionBold={'Tech stack :'}
+                           description={w.description}
+                        />
+                     );
+                  })}
+               </Zoom>
             </FlexWrapper>
          </Container>
       </StyledWorks>

@@ -14,6 +14,10 @@ export const theme = {
       typeWorkBg: 'rgba(215, 255, 224, 1)',
       typeWorkfont: 'rgba(1, 140, 15, 1)',
       lineBg: 'rgba(235, 234, 237, 1)',
+
+      borderColor: 'rgba(74, 74, 74, 1)',
+
+      placeholderColor: 'rgba(73, 80, 87, 1)',
    },
 
    media: {
@@ -22,5 +26,8 @@ export const theme = {
       mobile: 'screen and (max-width: 576px)',
       desktop: 'screen and (min-width: 1355px)',
       card: 'screen and (max-width: 400px)',
+   },
+   animations: {
+      transition: '0.2s ease-in-out',
    },
 };

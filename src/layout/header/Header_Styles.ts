@@ -20,7 +20,7 @@ const WrapperLogo = styled.div`
    margin-left: -7px;
 `;
 const WrapperContact = styled.div`
-   @media ${theme.media.mobile} {
+   @media ${theme.media.largeЕablet} {
       display: none;
    }
 `;

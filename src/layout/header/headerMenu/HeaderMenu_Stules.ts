@@ -8,10 +8,12 @@ const MenuList = styled.ul`
    justify-content: space-between;
    width: 609px;
    @media ${theme.media.largeЕablet} {
-      justify-content: space-around;
+      justify-content: start;
       flex-direction: column;
       height: 500px;
       align-items: center;
+      gap: 10px;
+      transition: ${theme.animations.transition};
    }
 `;
 
@@ -22,6 +24,7 @@ const Mask = styled.span`
    display: inline-block;
    height: 43%;
    overflow: hidden;
+   transition: ${theme.animations.transition};
 
    color: ${theme.colors.secondaryFont};
    @media ${theme.media.largeЕablet} {
@@ -67,6 +70,7 @@ const NavLink = styled(Link)`
       right: -10px;
       z-index: 1;
       transform: scale(0);
+      transition: ${theme.animations.transition};
 
       @media ${theme.media.largeЕablet} {
          top: 38%;
@@ -95,22 +99,35 @@ const NavLink = styled(Link)`
 const MobileMenu = styled.nav``;
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
    position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+
    top: 0;
    right: 0;
    bottom: 0;
-   left: 0;
+   left: 0px;
    z-index: 2;
+   transform: translateY(-100%);
 
    background-color: rgba(0, 0, 0, 0.9);
+   transition: 0.6s ease-in-out;
 
-   display: none;
+   //display: none;
    ${(props) =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
          display: flex;
-         justify-content: center;
+         //  justify-content: center;
          align-items: flex-start;
          padding-top: 100px;
+         transform: translateY(0);
+         & ul {
+            //justify-content: space-around;
+            transition: ${theme.animations.transition};
+            gap: 60px;
+         }
+         //transition: ${theme.animations.transition};
       `}
 `;
 
@@ -119,11 +136,13 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
    top: 35px;
 
-   right: 170px;
-   // bottom: 0px;
+   right: 30px;
+
    width: 60px;
    height: 60px;
    z-index: 5;
+
+   cursor: pointer;
    ${(props) =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
@@ -137,7 +156,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-image: linear-gradient(90deg, #e70faa 0%, #00c0fd 100%);
 
       position: absolute;
-
       ${(props) =>
          props.isOpen &&
          css<{ isOpen: boolean }>`
@@ -156,6 +174,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
          position: absolute;
          transform: translateY(-10px);
+         transition: ${theme.animations.transition};
 
          ${(props) =>
             props.isOpen &&
@@ -173,6 +192,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
          position: absolute;
          transform: translateY(10px);
+         transition: ${theme.animations.transition};
 
          ${(props) =>
             props.isOpen &&
@@ -181,10 +201,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
                width: 40px;
             `}
       }
-   }
-
-   @media ${theme.media.mobile} {
-      right: 10px;
    }
 `;
 

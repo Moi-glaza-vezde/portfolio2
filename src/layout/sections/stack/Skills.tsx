@@ -6,6 +6,7 @@ import { SectionText } from '../../../components/SectionText.Styled';
 import { SectionTitle } from '../../../components/SectionTitle.Styled';
 import { theme } from '../../../styled/Theme';
 import { Container } from '../../../components/Container';
+import { Fade } from 'react-awesome-reveal';
 
 const skillData = [
    {
@@ -47,9 +48,11 @@ export const Skills: React.FC = () => {
             <SectionTitle>My Tech Stack</SectionTitle>
             <SectionText> Technologies I’ve been working with recently</SectionText>
             <FlexWrapper wrap={'wrap'} justify={'space-around'}>
-               {skillData.map((s, index) => {
-                  return <Skill key={index} iconId={s.iconId} title={s.title} text={s.text} />;
-               })}
+               <Fade cascade={true} damping={0.2}>
+                  {skillData.map((s, index) => {
+                     return <Skill key={index} iconId={s.iconId} title={s.title} text={s.text} />;
+                  })}
+               </Fade>
             </FlexWrapper>
          </Container>
       </StyledSkills>
